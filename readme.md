@@ -1,47 +1,61 @@
-# Employee Tracker
+# Employee Management System
 
-## Description
-
-Employee Tracker is a command-line application that allows users to manage employee data, including departments, roles, and employees. Users can view all departments, roles, and employees, as well as add new departments, roles, and employees. Users can also update an employee's role.
-
-## Table of Contents
-
-- [Employee Tracker](#employee-tracker)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
+This command-line application allows you to manage departments, roles, and employees in a company.
 
 ## Installation
 
-To install Employee Tracker, clone the GitHub repository and run `npm install` to install the dependencies.
+1. Clone the repository to your local machine.
+2. Run `npm install` to install the required dependencies.
 
-Employee Tracker requires a MySQL database to store employee data. Create a database using the included `schema.sql` file.
+## Database Setup
 
-Employee Tracker uses environment variables to store the database connection information. Create a `.env` file in the root directory of the project and add the following variables:
-
-DB_HOST=<database hostname>
-DB_USER=<database username>
-DB_PASSWORD=<database password>
-DB_NAME=<database name>
-
+1. Make sure you have MySQL installed on your machine.
+2. In your MySQL client, run the contents of the `schema.sql` file to create the necessary database schema.
 
 ## Usage
 
-To run Employee Tracker, enter `npm start` in the command line. Select from the available options to view data or add new data to the database.
+1. Open a terminal or command prompt.
+2. Navigate to the project directory.
+3. Run `node index.js` to start the application.
+4. Follow the prompts to perform various actions, such as viewing departments, roles, and employees, adding departments, roles, and employees, and updating employee roles.
 
-## Credits
+## Dependencies
 
-Employee Tracker was created by Dylan Grissom.
+- inquirer: ^8.1.0
+- mysql: ^2.18.1
 
-Employee Tracker uses the following open source packages:
+## Database Schema
 
-- [Inquirer.js](https://www.npmjs.com/package/inquirer)
-- [mysql2](https://www.npmjs.com/package/mysql2)
-- [console.table](https://www.npmjs.com/package/console.table)
+The application uses the following database schema:
+
+### Department
+
+- id: INT PRIMARY KEY
+- name: VARCHAR(30) to hold department name
+
+### Role
+
+- id: INT PRIMARY KEY
+- title: VARCHAR(30) to hold role title
+- salary: DECIMAL to hold role salary
+- department_id: INT to hold reference to department role belongs to
+
+### Employee
+
+- id: INT PRIMARY KEY
+- first_name: VARCHAR(30) to hold employee first name
+- last_name: VARCHAR(30) to hold employee last name
+- role_id: INT to hold reference to employee role
+- manager_id: INT to hold reference to another employee that is the manager of the current employee (null if the employee has no manager)
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
 
 ## License
 
-Employee Tracker is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Contact
+
+For any inquiries or questions, feel free to contact me at github.com/Gr1ssom.
