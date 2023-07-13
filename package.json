@@ -7,9 +7,8 @@
       "start": "node index.js"
     },
     "dependencies": {
-      "dotenv": "^10.0.0",
-      "inquirer": "^8.2.0",
-      "mysql2": "^2.3.0"
+      "inquirer": "^8.1.0",
+      "mysql": "^2.18.1"
     }
   }
   
