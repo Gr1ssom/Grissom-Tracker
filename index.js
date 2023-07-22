@@ -255,4 +255,3 @@ const updateEmployeeRole = () => {
 
 // start the application
 mainPrompt();
-
