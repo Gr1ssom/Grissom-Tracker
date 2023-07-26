@@ -5,8 +5,8 @@ const util = require('util');
 const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
-  user: 'root',
-  password: 'DGcity23!',
+  user: 'your user',
+  password: 'your password',
   database: 'GrissomTrackerDB'
 });
 

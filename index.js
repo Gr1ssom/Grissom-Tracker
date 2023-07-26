@@ -20,7 +20,6 @@ const mainPrompt = () => {
       ]
     }
   ]).then(answer => {
-    // call the corresponding function based on user's choice
     switch (answer.action) {
       case 'View all departments':
         viewAllDepartments();
@@ -49,12 +48,11 @@ const mainPrompt = () => {
   });
 };
 
-// function to view all departments
 const viewAllDepartments = () => {
   db.findAllDepartments()
     .then(rows => {
       console.table(rows);
-      mainPrompt(); // show the main prompt again
+      mainPrompt();
     })
     .catch(err => {
       console.log(err);
@@ -62,7 +60,6 @@ const viewAllDepartments = () => {
     });
 };
 
-// function to view all roles
 const viewAllRoles = () => {
   db.findAllRoles()
     .then(rows => {
@@ -75,7 +72,6 @@ const viewAllRoles = () => {
     });
 };
 
-// function to view all employees
 const viewAllEmployees = () => {
   db.findAllEmployees()
     .then(rows => {
@@ -88,7 +84,6 @@ const viewAllEmployees = () => {
     });
 };
 
-// function to add a department
 const addDepartment = () => {
   inquirer.prompt([
     {
@@ -109,7 +104,6 @@ const addDepartment = () => {
   });
 };
 
-// function to add a role
 const addRole = () => {
   db.findAllDepartments()
     .then(departments => {
@@ -151,7 +145,6 @@ const addRole = () => {
     });
 };
 
-// function to add an employee
 const addEmployee = () => {
   db.findAllRoles()
     .then(roles => {
@@ -201,7 +194,6 @@ const addEmployee = () => {
     });
 };
 
-// function to update an employee role
 const updateEmployeeRole = () => {
   db.findAllEmployees()
     .then(employees => {

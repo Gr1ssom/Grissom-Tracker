@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/Gr1ssom/Grissom-Tracker",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "inquirer": "^8.2.5",
     "mysql": "^2.18.1"
   },

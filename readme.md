@@ -16,8 +16,16 @@ This command-line application allows you to manage departments, roles, and emplo
 
 1. Open a terminal or command prompt.
 2. Navigate to the project directory.
-3. Run `node index.js` to start the application.
-4. Follow the prompts to perform various actions, such as viewing departments, roles, and employees, adding departments, roles, and employees, and updating employee roles.
+3. run `npm install`
+4. Change credentials to your mysql credentials in db.js.
+5. Login to mysql using -u (username) -p
+6. Enter password
+7. Once in the shell, use  `source schema.sql`
+8. Exit the mysql shell
+9. Run `npm start` to start the application.
+10. Follow the prompts to perform various actions, such as viewing departments, roles, and employees, adding departments, roles, and employees, and updating employee roles.
+
+*see walkthrough if struggling
 
 ## Dependencies
 
@@ -52,6 +60,9 @@ The application uses the following database schema:
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
 
+# Walkthrough
+
+<video src="PROJECT12WT.mp4" controls title="Walkthrough"></video>
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
