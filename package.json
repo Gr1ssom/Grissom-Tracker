@@ -3,8 +3,25 @@
   "version": "1.0.0",
   "description": "Your application description",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gr1ssom/Grissom-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gr1ssom/Grissom-Tracker/issues"
+  },
+  "homepage": "https://github.com/Gr1ssom/Grissom-Tracker",
   "dependencies": {
     "inquirer": "^8.2.5",
     "mysql": "^2.18.1"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }

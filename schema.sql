@@ -1,3 +1,12 @@
+-- Drop the database if it exists
+DROP DATABASE IF EXISTS GrissomTrackerDB;
+
+-- Create a new database
+CREATE DATABASE GrissomTrackerDB;
+
+-- Use the new database for subsequent commands
+USE GrissomTrackerDB;
+
 -- Create department table
 CREATE TABLE department (
   id INT PRIMARY KEY AUTO_INCREMENT,
